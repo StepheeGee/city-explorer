@@ -1,8 +1,6 @@
 import {When} from 'react-if';
 
 
-// const API_KEY = 'pk.2f83b10778dc76e70f12311da1d24abb';
-
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 
