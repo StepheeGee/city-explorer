@@ -8,6 +8,7 @@ import ErrorComponent from './components/Error';
 import Weather from './components/Weather';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+const API = import.meta.env.VITE_API;
 
 function App() {
   const [city, setCity] = useState('');
@@ -19,12 +20,13 @@ function App() {
 
   async function fetchWeatherData(lat, lon) {
     try {
-      const response = await axios.get('http://localhost:3000/weather', {
+      const response = await axios.get(`${API}/weather`, {
         params: {
           lat: lat,
           lon: lon,
         },
       });
+      console.log(response);
       
       setForecast(response.data);
       setShowWeather(true);
@@ -46,6 +48,7 @@ function App() {
 
     try {
       const response = await axios.get(url);
+      console.log(response);
       if (response.data && response.data.length > 0) {
         setCity(response.data[0].display_name);
         setLatitude(response.data[0].lat);
