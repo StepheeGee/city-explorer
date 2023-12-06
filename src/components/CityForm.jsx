@@ -1,15 +1,15 @@
-import { useState, useRef } from 'react';
+import { useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 function CityForm(props) {
   const [showHeading, setShowHeading] = useState(false);
-  const textInput = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowHeading(true);
-    props.handleChangeCity(textInput.current.value);
+     
+    props.handleGetLocation();
   };
   return (
     <Form onSubmit={handleSubmit} className="google-search-form">
@@ -21,7 +21,8 @@ function CityForm(props) {
             placeholder="Oh...the places you'll go."
             size="lg"
             type="text"
-            ref={textInput}
+         
+            onChange={props.updateCity}
             className="search-input"
           />
           <Button variant="primary" type="submit" className="search-button">
@@ -32,6 +33,7 @@ function CityForm(props) {
       {showHeading && props.city &&  (
         <h2 className="results-text">Welcome to {props.city}. <br/> Explore Below!</h2>
       )}
+    
     </Form>
   );
 }
