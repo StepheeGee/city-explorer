@@ -5,7 +5,7 @@
 [Deployed Link](https://endearing-lollipop-2dc400.netlify.app/)
 
 **Author**: Stephanie G. Johnson
-**Version**: 1.0.1
+**Version**: 1.1.1
 
 ## Overview
 
@@ -24,6 +24,10 @@ The problem domain for this assignment involves building a React application tha
 TBD
 
 ## Architecture
+
+### Server Cycle Diagram
+
+[Here](cycle.sql)
 
 ### Components:
 
@@ -81,6 +85,12 @@ Version: 1.0.1
 Fixed handling of errors when fetching location data.
 Enhanced UI feedback for error messages or loading indicators during API requests.
 Added more specific error handling and messages for failed API requests.
+
+12-06-2023 3pm - 
+Version: 1.1.0
+Endpoints Communicate
+Data is fetched from JSON
+Deployed with Render and Netlify
 
 ## Credit and Collaborations
 
