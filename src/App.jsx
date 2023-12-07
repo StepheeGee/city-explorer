@@ -6,6 +6,7 @@ import CityForm from './components/CityForm';
 import Map from './components/Map';
 import ErrorComponent from './components/Error';
 import Weather from './components/Weather';
+import Movies from './components/Movies';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const VITE_API_SERVER = import.meta.env.VITE_API_SERVER;
@@ -16,6 +17,7 @@ function App() {
   const [longitude, setLongitude] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [forecast, setForecast] = useState([]);
+  const [movies, setMovies] = useState([]); 
 
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -29,13 +31,14 @@ function App() {
         params: {
           lat: lat,
           lon: lon,
-          searchQuery: searchQuery, 
+          searchQuery: searchQuery,
         },
       });
 
       console.log("Weather Response", response.data);
 
       setForecast(response.data);
+      fetchMoviesByCity(searchQuery); 
     } catch (error) {
       console.error('Error fetching weather data:', error);
     }
@@ -60,6 +63,22 @@ function App() {
     }
   }
 
+  async function fetchMoviesByCity(city) {
+    try {
+      const response = await axios.get(`${VITE_API_SERVER}/movies`, {
+        params: {
+          city: city,
+        },
+      });
+
+      console.log("Movies Response", response.data);
+
+      setMovies(response.data);
+    } catch (error) {
+      console.error('Error fetching movies:', error);
+    }
+  }
+
   return (
     <div className="app-container">
       <Header />
@@ -68,6 +87,7 @@ function App() {
         <CityForm updateCity={updateCity} city={city} handleGetLocation={getLocation} />
         {latitude && longitude && <Map latitude={latitude} longitude={longitude} city={city} />}
         {forecast.length > 0 && <Weather forecast={forecast} city={city} />}
+        {movies.length > 0 && <Movies movies={movies} />} 
         <Footer />
       </div>
     </div>
