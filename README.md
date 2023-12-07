@@ -27,7 +27,9 @@ TBD
 
 ### Server Cycle Diagram
 
-[Here](cycle.sql)
+[LocationAPI](cycle.sql)
+![WeatherAPI](datachart.png)
+[WrittenFlowforWeatherAPI](datachart.md)
 
 ### Components:
 
@@ -92,39 +94,20 @@ Endpoints Communicate
 Data is fetched from JSON
 Deployed with Render and Netlify
 
+12-06-2023 11:30pm
+Version: 1.2.0
+Deprecated the path to the JSON
+Added the Weather Bit API and changed the logic 
+
 ## Credit and Collaborations
 
 Thank you Brandon (TA)
 
 ## Time Estimates
 
-### Name of feature: 
-
-1. Set up your React and API
-2. Locations
-3. Maps
-4. Errors
-
-Estimate of time needed to complete: _____
-1. 30 min
-2. 60 min
-3. 60 min
-4. 60 min
-
-Start time: _____
-1. 4:00pm
-
-2-4. 5:00pm
-
-Finish time: _____
-1. 4:45pm
-
-2-4. 11:30pm
-
-Actual time needed to complete: _____
-1. 40 min
-
-2-4. 6hrs 30min
+Lab 6. 12.4.23 - 4 Features - 6 hours
+Lab 7. 12.5.23 - 3 Features - 10 plus hours
+Lab 8. 12.6.23 - 3 Features - 5 hours and still working
 
 ## Lighthouse
  
