@@ -11,7 +11,7 @@ const Weather = (props) => {
           {props.forecast.map((day, index) => (
             
             <div key={index} className="weather-day">
-              <p>{day.dayOfWeek} Forecast ({day.date})</p>
+              <p>{day.dayOfWeek} ({day.date})</p>
               <p> {day.description}</p>
               
             </div>
