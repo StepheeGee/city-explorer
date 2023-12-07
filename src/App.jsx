@@ -27,10 +27,13 @@ function App() {
     try {
       const response = await axios.get(`${VITE_API_SERVER}/weather`, {
         params: {
-          latitude: lat,
-          longitude: lon,
+          lat: lat,
+          lon: lon,
+          searchQuery: searchQuery, 
         },
       });
+
+      console.log("Weather Response", response.data);
 
       setForecast(response.data);
     } catch (error) {
