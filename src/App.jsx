@@ -7,6 +7,7 @@ import Map from './components/Map';
 import ErrorComponent from './components/Error';
 import Weather from './components/Weather';
 import Movies from './components/Movies';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const VITE_API_SERVER = import.meta.env.VITE_API_SERVER;
