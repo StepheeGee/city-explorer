@@ -1,88 +1,192 @@
 
 
 body{
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(59, 90, 117);
+  font-family: oswald;
+  background-image: url("building.jpg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+
 }
 
 .header{
-  background-color: black;
-  width: 100%;
-  padding: 10px;
-  box-shadow: 5px 10px 8px -6px #4285F4;
-
+  margin: 120px auto;
+  width: 60%;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  /* background-color: rgba(17, 25, 40, 0.25); */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 50px;  
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
 .header-text{
-  font-size: 100px;
+  font-size: 90px;
   text-align: center;
-  font-weight: 500;
   text-transform: uppercase;
-  font-family: dhurjati;
-  color: #4285F4;
-  text-shadow: 2px 1px rgb(6, 49, 56);
+  font-family: oswald;
+  color: #dfe2e6;
+  text-shadow: 3px 1px rgb(6, 49, 56);
+  margin-bottom: 15px;
+  padding: 20px;
+  box-shadow: rgb(59, 90, 117) 4px 3px 1px 0px inset, rgb(8, 2, 33) -5px 6px 6px 1px inset;background: linear-gradient(0deg, rgb(1, 183, 219) 0%, rgb(8, 2, 33) 100%);
+  border-radius: 8px;  
 }
 
-.instructions{
-  color: gray;
+.header-sub{
+  text-align: center;
+  color: #c7c7cb;
+  text-shadow: 1px .5px 1px rgb(60, 108, 147);
+  font-size: 30px;
+  font-family: oswald;
+  font-weight:200;
+  font-style: italic;
+  word-spacing: 30px;
 }
+
 .error-message{
   color: red;
-  font-weight: 700;
   text-align: center;
   margin-top: 20px;
 }
 
-.form-container{
+.search-group{
   width: 50%;
-  margin: 60px auto;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 
-.google-search-form {
+
+
+
+
+.results-text, .weather-results, .movie-results{
+  margin-top: 55px;
+  margin-bottom: 55px;
+  font-size: 40px;
   text-align: center;
+  color: #c7c7cb;
+  text-shadow: 2px .5px 1px rgb(21, 38, 52);
+  font-family: oswald;
+  font-weight:300;
 }
 
-.google-search-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
 
-.results-text{
-  margin-top: 25px;
-  margin-bottom: 25px;
+
+
+
+.search-button {
+  
+  border-radius: 24px;
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  box-shadow: 1px 2px 2px #1e1e1f; 
+  transition: all .3s ease;
 }
 
 
-.search-group {
-  display: flex;
-  align-items: center;
-}
 
 .search-input {
-  border: 1px solid #dfe1e5;
-  border-radius: 24px;
   padding: 10px;
   width: 400px;
   margin-right: 10px;
-}
-
-.search-button {
+  color: #0f224b;
   border-radius: 24px;
-  padding: 10px 20px;
+  border: 5px solid #78797b;
+  box-shadow: rgb(59, 90, 117) 1px 1px 2px 3px inset;
+  font-size: 1em;
+  line-height: 1.45;
+  padding: 0.6em 1.45em 0.7em;
+ 
 }
 
+.map{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+  
+}
+
+
+.card {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
-  color: #4285F4;
-  padding: 5px;
-  text-align: center;
-  font-family: dhurjati;
-  
+  color: #ebeef2;
+  padding: 2px;
+  text-align: left;
+  font-family: oswald;
+}
+
+
+
+.accordion {
+  width: 60%;
+  margin: auto;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #c7c7cb;
+  font-size: 20px;
+  font-family: oswald;
+}
+
+.accordion-header:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.accordion-header.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.accordion-content {
+  padding: 10px 20px;
+  color: #c7c7cb;
+  font-size: 16px;
+  font-family: oswald;
 }
