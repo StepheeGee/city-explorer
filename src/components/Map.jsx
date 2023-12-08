@@ -6,7 +6,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 
 function Map(props) {
-console.log(API_KEY);
+
 
 
   return (
